@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="calculadora-molde">
+    <div class="display" id="display"></div>
+    <div class="calculadora-itens">
+        <div class="numeros-container">
+            <div class="numero" onclick="clicarNoBotao('1')">1</div>
+            <div class="numero" onclick="clicarNoBotao('2')">2</div>
+            <div class="numero" onclick="clicarNoBotao('3')">3</div>
+            <br>
+            <div class="numero" onclick="clicarNoBotao('4')">4</div>
+            <div class="numero" onclick="clicarNoBotao('5')">5</div>
+            <div class="numero" onclick="clicarNoBotao('6')">6</div>
+            <br>
+            <div class="numero" onclick="clicarNoBotao('7')">7</div>
+            <div class="numero" onclick="clicarNoBotao('8')">8</div>
+            <div class="numero" onclick="clicarNoBotao('9')">9</div>
+            <br>
+            <div class="numero" onclick="clicarNoBotao('0')">0</div>
+        </div>
+        <div class="operadores">
+            <div class="excluir" onclick="deletar()"><</div>
+            <div class="operador" onclick="clicarNoBotao('+')">+</div>
+            <div class="operador" onclick="clicarNoBotao('-')">-</div>
+            <div class="operador" onclick="clicarNoBotao('*')">*</div>
+            <div class="operador" onclick="clicarNoBotao('/')">/</div>
+            <div class="igual" onclick="calcula()">=</div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
