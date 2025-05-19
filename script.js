@@ -59,43 +59,25 @@ function calcula() {
                     i = array.indexOf("/");
                 }
 
-                if (array[i] == operadores[0]) {
-                    let primeiroNumero = parseInt(array[i - 1])
-                    let numeroDois = parseInt(array[i + 1])
-                    let soma = primeiroNumero + numeroDois;
-                    array[i] = soma.toString();
-                    array.splice(i + 1, 1);
-                    array.splice(i - 1, 1);
-                    break;
+                let primeiroNumero = parseInt(array[i -1]);
+                let segundoNumero = parseInt(array[i +1])
+                let resultado;
 
-                } else if (array[i] == operadores[1]) {
-                    let primeiroNumero = parseInt(array[i - 1])
-                    let numeroDois = parseInt(array[i + 1])
-                    let sub = primeiroNumero - numeroDois;
-                    array[i] = sub.toString();
-                    array.splice(i + 1, 1)
-                    array.splice(i - 1, 1);
-                    break;
 
-                } else if (array[i] == operadores[2]) {
-                    let primeiroNumero = parseInt(array[i - 1])
-                    let numeroDois = parseInt(array[i + 1])
-                    let multi = primeiroNumero * numeroDois;
-                    array[i] = multi.toString();
-                    array.splice(i + 1, 1)
-                    array.splice(i - 1, 1);
-                    break;
-
-                } else if (array[i] == operadores[3]) {
-                    let primeiroNumero = parseInt(array[i - 1])
-                    let numeroDois = parseInt(array[i + 1])
-                    let div = primeiroNumero / numeroDois;
-                    array[i] = div.toString();
-                    array.splice(i + 1, 1)
-                    array.splice(i - 1, 1);
-                    break;
-
+                if (array[i] == operadores[0]){
+                    resultado = primeiroNumero + segundoNumero;
+                }else if (array[i] == operadores[1]){
+                    resultado = primeiroNumero - segundoNumero;
+                }else if (array[i] == operadores[2]){
+                    resultado = primeiroNumero * segundoNumero;
+                }else if (array[i] == operadores[3]){
+                    resultado = primeiroNumero / segundoNumero;
                 }
+                array[i] = resultado;
+                array.splice(i + 1, 1);
+                array.splice(i - 1, 1);
+                break;
+
             }
 
 
