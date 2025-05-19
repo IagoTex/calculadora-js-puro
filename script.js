@@ -42,7 +42,7 @@ function clicarNoBotao(tecla) {
 function calcula() {
 
     let equacao = display.textContent;
-    if(operadores.includes(equacao.charAt(0) || operadores.includes(equacao.charAt(equacao.length - 1)))){
+    if(operadores.includes(equacao.charAt(0)) || operadores.includes(equacao.charAt(equacao.length - 1)) || operadores.includes(equacao.charAt(equacao.length -1))) {
         alert("Digite uma equação válida");
         return;
     }
@@ -51,36 +51,48 @@ function calcula() {
         for (let i = 0; i < array.length; i++) {
             if (operadores.includes(array[i])) {
 
+                if(array.includes("*")){
+                    i = array.indexOf("*")
+
+                }
+                else if(array.includes("/")){
+                    i = array.indexOf("/");
+                }
+
                 if (array[i] == operadores[0]) {
                     let primeiroNumero = parseInt(array[i - 1])
                     let numeroDois = parseInt(array[i + 1])
                     let soma = primeiroNumero + numeroDois;
-                    array.splice(i - 1, 3);
-                    array.unshift(soma.toString());
+                    array[i] = soma.toString();
+                    array.splice(i + 1, 1);
+                    array.splice(i - 1, 1);
                     break;
 
                 } else if (array[i] == operadores[1]) {
                     let primeiroNumero = parseInt(array[i - 1])
                     let numeroDois = parseInt(array[i + 1])
                     let sub = primeiroNumero - numeroDois;
-                    array.splice(i - 1, 3);
-                    array.unshift(sub.toString());
+                    array[i] = sub.toString();
+                    array.splice(i + 1, 1)
+                    array.splice(i - 1, 1);
                     break;
 
                 } else if (array[i] == operadores[2]) {
                     let primeiroNumero = parseInt(array[i - 1])
                     let numeroDois = parseInt(array[i + 1])
                     let multi = primeiroNumero * numeroDois;
-                    array.splice(i - 1, 3);
-                    array.unshift(multi.toString());
+                    array[i] = multi.toString();
+                    array.splice(i + 1, 1)
+                    array.splice(i - 1, 1);
                     break;
 
                 } else if (array[i] == operadores[3]) {
                     let primeiroNumero = parseInt(array[i - 1])
                     let numeroDois = parseInt(array[i + 1])
                     let div = primeiroNumero / numeroDois;
-                    array.splice(i - 1, 3);
-                    array.unshift(div.toString());
+                    array[i] = div.toString();
+                    array.splice(i + 1, 1)
+                    array.splice(i - 1, 1);
                     break;
 
                 }
