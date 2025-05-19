@@ -7,9 +7,10 @@ body{
     width: 500px;
     border: solid 10px black;
     background-color: black;
-    border-radius: 5px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
+
 }
 
 body{
@@ -31,6 +32,7 @@ body{
 }
 
 .calculadora-itens{
+    padding-top: 10px;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -54,6 +56,7 @@ body{
     margin-top: 5px;
     height: 100px;
     width: 100px;
+    font-size: 26px;
     background-color: #2b2b2b;
     border-radius: 5px;
     align-items: center;
@@ -70,6 +73,8 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 .operador{
     height: 50px;
@@ -80,6 +85,7 @@ body{
     align-items: center;
     color: #5ab500;
     border-radius: 5px;
+    font-size: 25px;
 }
 
 .igual{
@@ -92,6 +98,7 @@ body{
     border: 2px solid black;
     color: white;
     border-radius: 5px;
+    font-size: 25px;
 }
 .excluir{
     height: 50px;
@@ -103,6 +110,7 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    font-size: 25px;
 }
 
 
